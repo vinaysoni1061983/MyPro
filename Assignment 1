@@ -82,13 +82,54 @@ Unzip test_dir.zip into a new directory named unzipped_dir.
 5. Downloading Files
 Use wget to download a file from a URL (e.g., https://example.com/sample.txt).
 
+                        vinaymacpro@VinayMacPros-MacBook-Pro GITinMAC % wget --no-check-certificate https://raw.githubusercontent.com/vinaysoni1061983/MyPro/refs/heads/main/Assignment%201
+                        --2025-11-27 18:35:09--  https://raw.githubusercontent.com/vinaysoni1061983/MyPro/refs/heads/main/Assignment%201
+                        Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 2606:50c0:8002::154, 2606:50c0:8001::154, 2606:50c0:8000::154, ...
+                        Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|2606:50c0:8002::154|:443... connected.
+                        WARNING: cannot verify raw.githubusercontent.com's certificate, issued by ‘CN=Sectigo RSA Domain Validation Secure Server CA,O=Sectigo Limited,L=Salford,ST=Greater Manchester,C=GB’:
+                          Unable to locally verify the issuer's authority.
+                        HTTP request sent, awaiting response... 200 OK
+                        Length: 4469 (4.4K) [text/plain]
+                        Saving to: ‘Assignment 1’
+                        
+                        Assignment 1                                           100%[============================================================================================================================>]   4.36K  --.-KB/s    in 0s      
+                        
+                        2025-11-27 18:35:09 (10.9 MB/s) - ‘Assignment 1’ saved [4469/4469]
+                        
+                        vinaymacpro@VinayMacPros-MacBook-Pro GITinMAC % ls -lrt
+                        total 24
+                        drwxr-xr-x  5 vinaymacpro  staff   160 27 Nov 17:01 GitPractice
+                        drwxr-xr-x  2 vinaymacpro  staff    64 27 Nov 18:16 test_dir
+                        -rw-r--r--  1 vinaymacpro  staff     0 27 Nov 18:17 renamed_example.txt
+                        -rw-r--r--  1 vinaymacpro  staff   168 27 Nov 18:27 test_dir.zip
+                        -rw-r--r--  1 vinaymacpro  staff  4469 27 Nov 18:35 Assignment 1
+                        vinaymacpro@VinayMacPros-MacBook-Pro GITinMAC % cat Assignment\ 1 
+                        1. Creating and Renaming Files/Directories
+                        Create a directory named test_dir using mkdir.
+                        Inside test_dir, create an empty file called example.txt.
+                        Rename example.txt to renamed_example.txt using mv
 
 
 6. Changing Permissions
 Create a file named secure.txt and change its permissions to read-only for everyone using chmod.
 
+                        vinaymacpro@VinayMacPros-MacBook-Pro GITinMAC % touch secure.txt
+                        vinaymacpro@VinayMacPros-MacBook-Pro GITinMAC % chmod 444 secure.txt 
+                        vinaymacpro@VinayMacPros-MacBook-Pro GITinMAC % ls -lrt
+                        total 0
+                        drwxr-xr-x  5 vinaymacpro  staff  160 27 Nov 17:01 GitPractice
+                        -r--r--r--  1 vinaymacpro  staff    0 27 Nov 18:37 secure.txt
+
+
+
+
 7. Working with Environment Variables
 Use export to set a new environment variable called MY_VAR with the value "Hello, Linux!".
+
+                        vinaymacpro@VinayMacPros-MacBook-Pro GITinMAC % export MY_VAR='Hello, Linux!'
+                        vinaymacpro@VinayMacPros-MacBook-Pro GITinMAC % printenv | grep VAR          
+                        MY_VAR=Hello, Linux!
+                      
 
 
 Submission Guidelines -: Attach Screenshots or command along with explanation and submit in doc(google doc or microsoft doc) format also attach github repo link
