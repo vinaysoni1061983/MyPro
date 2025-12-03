@@ -215,10 +215,40 @@ Print all student grades.
 #4. Read from a File
 #We used open in read mode and file.read to read and print to display.
 
-                myfile= open('Note.txt','r') ### creating a new file 
-                myFileData=myfile.read()
+            fileName=input("Enter a file name to perform actions : ")
 
-                print("Here are the list of current students\n", myFileData)
-
+                        def getFileName():   
+                            return fileName
+                        
+                        def openFileReadOnly():
+                            openFileR=open(getFileName(),'r')
+                            return openFileR
+                        
+                        def openFileWriteOnly():
+                            openFileW=open(getFileName(),'w')
+                            return openFileW
+                        
+                        def closeFile(actionType):
+                            actionType.close()
+                            
+                        
+                        
+                        print("We are performing read only action on file : " ,getFileName())
+                        myFileData=openFileReadOnly()
+                        readMyData=myFileData.read()
+                        print("Here are contents of the file ", getFileName(), readMyData)
+                        closeFile(myFileData)
+                        
+                        
+                        print("We are performing write only action on file : " ,getFileName())
+                        myFileData=openFileWriteOnly()
+                        myFileData.write("writing new data using functions to this file")
+                        closeFile(myFileData)
+                        
+                        
+                        myFileData=openFileReadOnly()
+                        readMyData=myFileData.read()
+                        print("Here are contents of the file ", getFileName(), "\n", readMyData)
+                        closeFile(myFileData)
 
 Submission Guidelines -: Attach Screenshots or command along with explanation and submit in doc(google doc or microsoft doc) format or share github link
