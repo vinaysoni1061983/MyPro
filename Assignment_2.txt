@@ -1,0 +1,224 @@
+
+1. Grade Checker
+Take a score as input and print the grade based on the following:
+90+ : "A"
+80-89 : "B"
+70-79 : "C"
+60-69 : "D"
+Below 60 : "F"
+here we used a basic if else statement to carry out marks and all.
+
+            #Take a score as input and print the grade based on the following:
+
+            std_score = int(input("Enter your score : "))
+
+            if std_score >= 60 and std_score <=69:
+                print("As per the scores you got, you got grade D !")
+            elif std_score >=70 and std_score <=79:
+                print("As per the scores you got, you got grade C !")
+            elif std_score >=80 and std_score <=89:
+                print("As per the scores you got, you got grade B !")
+            elif std_score >=90:
+                print("As per the scores you got, you got grade A !")
+            else:
+                print("As per the scores you got, you got grade F !")
+
+
+
+
+2 Student Grades
+Create a dictionary where the keys are student names and the values are their grades. Allow the user to:
+Add a new student and grade.
+Update an existing student’s grade.
+Print all student grades.
+
+
+                # dictionary of a class tenth with all the names and grades of the students:
+                class_tenth = {
+                'Student_1':'B',
+                'Student_2':'F',
+                'Student_3':'C',
+                'Student_4':'B',
+                'Student_5':'A',
+                'Student_6':'A',
+                'Student_7':'F'
+                }   
+
+
+                try:
+                action=int(input("What you want to do : \n 1. Add a new student - enter 1 \n 2. Delete an existing student record - enter 2 \n :: "))
+                if action == 1:
+                stud_name=input("Enter the new student name : ")
+                stud_grade=input("Enter the new student's grade : ")
+
+                class_tenth[stud_name]=stud_grade
+                print("\nNew student has been ADDED !\n" , class_tenth)
+
+                elif action == 2:
+                stud_name=input("Enter the new student name : ")
+                del class_tenth[stud_name]
+                print("\nExisting student has been DELETED !\n" , class_tenth)   
+
+                else:
+                print("Invalid input, please choose  1 or 2 ")
+
+                except:
+                print("Something went wrong, You should only enter numeric values ")
+
+
+
+Used dictionary and basic operations. Using if else:
+3.Write to a File
+Write a program to create a text file and write some content to it.
+
+
+
+Using file functions like write and open.
+4. Read from a File
+We used open in read mode and file.read to read and print to display.
+
+Submission Guidelines -: Attach Screenshots or command along with explanation and submit in doc(google doc or microsoft doc) format or share github link
+
+
+
+/Users/vinaymacpro//Desktop/MacProData/python_tutvia 🐍 v3.14.0 
+❯ python3 Assignments.py
+1. Grade Checker
+Take a score as input and print the grade based on the following:
+90+ : "A"
+80-89 : "B"
+70-79 : "C"
+60-69 : "D"
+Below 60 : "F"
+here we used a basic if else statement to carry out marks and all.
+
+            #Take a score as input and print the grade based on the following:
+
+            std_score = int(input("Enter your score : "))
+
+            if std_score >= 60 and std_score <=69:
+                print("As per the scores you got, you got grade D !")
+            elif std_score >=70 and std_score <=79:
+                print("As per the scores you got, you got grade C !")
+            elif std_score >=80 and std_score <=89:
+                print("As per the scores you got, you got grade B !")
+            elif std_score >=90:
+                print("As per the scores you got, you got grade A !")
+            else:
+                print("As per the scores you got, you got grade F !")
+
+
+
+
+2 Student Grades
+Create a dictionary where the keys are student names and the values are their grades. Allow the user to:
+Add a new student and grade.
+Update an existing student’s grade.
+Print all student grades.
+
+
+                # dictionary of a class tenth with all the names and grades of the students:
+                class_tenth = {
+                'Student_1':'B',
+                'Student_2':'F',
+                'Student_3':'C',
+                'Student_4':'B',
+                'Student_5':'A',
+                'Student_6':'A',
+                'Student_7':'F'
+                }   
+
+
+                try:
+                action=int(input("What you want to do : \n 1. Add a new student - enter 1 \n 2. Delete an existing student record - enter 2 \n :: "))
+                if action == 1:
+                stud_name=input("Enter the new student name : ")
+                stud_grade=input("Enter the new student's grade : ")
+
+                class_tenth[stud_name]=stud_grade
+                print("\nNew student has been ADDED !\n" , class_tenth)
+
+                elif action == 2:
+                stud_name=input("Enter the new student name : ")
+                del class_tenth[stud_name]
+                print("\nExisting student has been DELETED !\n" , class_tenth)   
+
+                else:
+                print("Invalid input, please choose  1 or 2 ")
+
+                except:
+                print("Something went wrong, You should only enter numeric values ")
+
+
+
+#Used dictionary and basic operations. Using if else:
+#3.Write to a File
+#Write a program to create a text file and write some content to it.
+
+
+
+                # dictionary of a class tenth with all the names and grades of the students:
+                class_tenth = {
+                'Student_1':'B',
+                'Student_2':'F',
+                'Student_3':'C',
+                'Student_4':'B',
+                'Student_5':'A',
+                'Student_6':'A',
+                'Student_7':'F'
+                }   
+
+                myfile= open('logs.txt','w') ### creating a new file 
+
+                myfile.writelines(str(class_tenth))
+
+                myfile=open('Logs.txt','r') ### open file as read only to read the current data
+
+                myFileData=myfile.read()
+
+                print("Here are the list of current students\n", myFileData)
+
+
+                #try:
+                action=int(input("\nWhat you want to do : \n 1. Add a new student - enter 1 \n 2. Delete an existing student record - enter 2 \n :: "))
+                    
+                if action == 1:
+                        stud_name=input("Enter the new student name : ")
+                        stud_grade=input("Enter the new student's grade : ")
+
+                        class_tenth[stud_name]=stud_grade
+
+                        print(class_tenth)
+
+                        myfile= open('logs.txt','w')
+                        myfile.write("\nNew student has been ADDED !\n" + str(class_tenth) )
+                        myfile.close 
+                elif action == 2:
+                        stud_name=input("Enter the new student name : ")
+                        del class_tenth[stud_name]
+                
+                        myfile= open('logs.txt','w')
+                        myfile.write("\nExisting student has been DELETED !\n" + str(class_tenth)) 
+                        myfile.close 
+                else:
+                        print("Invalid input, please choose  1 or 2 ")
+
+                #except:
+                #   print("Something went wrong, You should only enter numeric values ")
+
+                myfile.close 
+
+
+
+
+#Using file functions like write and open.
+#4. Read from a File
+#We used open in read mode and file.read to read and print to display.
+
+                myfile= open('Note.txt','r') ### creating a new file 
+                myFileData=myfile.read()
+
+                print("Here are the list of current students\n", myFileData)
+
+
+Submission Guidelines -: Attach Screenshots or command along with explanation and submit in doc(google doc or microsoft doc) format or share github link
