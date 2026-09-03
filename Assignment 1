@@ -21,7 +21,7 @@ Rename example.txt to renamed_example.txt using mv
             drwxr-xr-x  2 vinaymacpro  staff   64 27 Nov 18:16 test_dir
             -rw-r--r--  1 vinaymacpro  staff    0 27 Nov 18:17 renamed_example.txt
             
-
+#hi
 2. Viewing File Contents
 Use cat to display the contents of /etc/passwd.
 Display only the first 5 lines of /etc/passwd using head.
